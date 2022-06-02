@@ -1,0 +1,100 @@
+main {
+    width: 100%;
+    height: calc(100% - 15%);
+    padding: 20px 30px;
+    overflow: hidden !important;
+}
+
+main .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    gap: 30px;
+    padding-right: 8px;
+}
+
+.card {
+    background: #222;
+    padding: 15px 15px 5px;
+    border: 3px solid rgba(245, 245, 245, 0.22);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.card .card-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.card-img::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0;
+    background: rgba(20, 20, 20, 0.432);
+}
+
+.card img {
+    width: 100%;
+}
+
+.play-btn {
+    position: absolute;
+    background-color: #ccc;
+    color: #222;
+    padding: 15px 18px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.details-section {
+    font-size: 0.9rem;
+}
+
+.title {
+    font-size: 0.9rem;
+    margin-bottom: 7px;
+    font-weight: lighter;
+}
+
+.title span {
+    color: #ff4500;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.section-title {
+    color: #ff4500;
+    font-size: .9rem;
+}
+
+.details {
+    font-size: 0.8rem;
+    margin-block: 3px 10px;
+    font-weight: lighter;
+}
+
+video {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    main .container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 550px) {
+    main .container {
+        grid-template-columns: 1fr;
+        gap: 40px 0;
+    }
+}

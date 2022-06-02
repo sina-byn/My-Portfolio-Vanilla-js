@@ -1,0 +1,212 @@
+main {
+    width: 100%;
+    height: calc(100% - 15%);
+    padding: 20px 30px;
+    overflow: hidden !important;
+}
+
+main .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+}
+
+.img-section {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding-right: 100px;
+}
+
+figure {
+    width: 350px;
+    height: 350px;
+    background-color: #ff4500;
+    border-radius: 30% 70% 65% 35% / 30% 29% 71% 70%;
+}
+
+img {
+    width: 350px;
+    transform: translate(60px, -80px) scaleX(-1);
+    border-radius: 30% 70% 65% 35% / 30% 29% 71% 70%;
+}
+
+.about-me {
+    width: 50%;
+    height: 100%;
+    padding: 5px 0;
+    overflow-x: hidden !important;
+    overflow-y: auto;
+    cursor: default;
+}
+
+.about-me h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.about-me h2::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #ff4500;
+    border-radius: 5px;
+    top: 100%;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+    transform-origin: center;
+    transform: scale(0);
+}
+
+.about-me h2:hover::after {
+    transform: scale(1);
+}
+
+.about-me p span {
+    color: #ff4500;
+}
+
+.education {
+    margin: 15px 30px 0;
+    line-height: 2rem;
+}
+
+.skills {
+    margin: 50px 30px 15px;
+    line-height: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.skill-title {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.progress {
+    position: absolute;
+    height: 20px;
+    inset: 0 0;
+    width: 100px;
+    background: repeating-linear-gradient(45deg, black 0 10px, orangered 10px 15px);
+    transition: width 3s linear;
+}
+
+.resume-section {
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+}
+
+.resume-link {
+    font-size: 0.9rem;
+    border: 2px solid whitesmoke;
+    padding: 10px 20px 13px;
+}
+
+.resume-link:hover {
+    background: rgba(83, 83, 83, 0.397);
+}
+
+.resume-link:active {
+    background: rgba(83, 83, 83, 0.651);
+}
+
+.hobbies {
+    margin: 15px 30px;
+    line-height: 2rem;
+}
+
+.motives {
+    margin: 15px 30px;
+    line-height: 2rem;
+}
+
+@media (max-width: 1030px) {
+    main {
+        overflow-y: auto !important;
+        align-items: center;
+    }
+
+    main .container {
+        flex-direction: column;
+        overflow-y: auto !important;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        padding: 40px 0 0;
+        gap: 70px 0;
+    }
+
+    .img-section {
+        width: 100%;
+        padding-right: 10%;
+        display: grid !important;
+    }
+    
+    figure {
+        width: 300px;
+        height: 300px;
+    }
+    
+    img {
+        width: 300px;
+        transform: translate(30px, -40px) scaleX(-1);
+    }
+    .skills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-me {
+        width: 80%;
+    }
+    
+    .about-me h2 {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .img-section {
+        padding-right: 10%;
+    }
+
+    figure {
+        width: 250px;
+        height: 250px;
+    }
+    
+    img {
+        width: 250px;
+    }
+
+    .about-me {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .skills {
+        width: 80%;
+    }
+
+    .skill,
+    .resume-section {
+        width: 100%;
+        display: block;
+        margin-inline: 0;
+    }
+}

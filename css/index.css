@@ -1,0 +1,58 @@
+main {
+    width: 100%;
+    height: calc(100% - 15%);
+    padding: 20px 30px;
+    overflow: hidden !important;
+}
+
+main .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 60px;
+}
+
+.title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+    word-spacing: 5px;
+}
+
+.intro {
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: lighter;
+    margin-bottom: 40px;
+}
+
+.full-name {
+    color: #ff4500;
+    font-weight: 600;
+}
+
+.about-me {
+    padding: 10px 30px 12px; 
+    border: 1px solid whitesmoke;
+    font-weight: lighter;
+    font-size: .95rem;
+    transition: transform 0.1s linear;
+}
+
+.about-me:is(:hover, :active) {
+    background: rgba(153, 153, 153, 0.61);
+    color: #fff;
+}
+
+.about-me:active {
+    transform: scale(0.95);
+}
+
+@keyframes typewriter-effect {
+    from {
+        width: 0;
+    } to {
+        width: 100%;
+    }
+}
