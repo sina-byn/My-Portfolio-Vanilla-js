@@ -179,6 +179,24 @@ footer {
   display: none;
 }
 
+#ig-link-1 {
+    display: flex;
+}
+
+#ig-link-2 {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #ig-link-1 {
+        display: none;
+    }
+    
+    #ig-link-2 {
+        display: flex;
+    }
+}
+
 @media (max-width: 730px) {
   nav {
     height: 100%;
