@@ -189,11 +189,11 @@ footer {
 
 @media (max-width: 768px) {
     #ig-link-1 {
-        display: none;
+        display: none !important;
     }
     
     #ig-link-2 {
-        display: flex;
+        display: flex !important;
     }
 }
 
