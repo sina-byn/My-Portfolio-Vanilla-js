@@ -1,108 +1,185 @@
 main {
-    width: 100%;
-    height: calc(100% - 15%);
-    padding: 20px 30px;
-    overflow: hidden !important;
+  width: 100%;
+  height: calc(100% - 15%);
+  padding: 20px 30px;
+  overflow: hidden !important;
 }
 
 main .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
-    gap: 30px;
-    padding-right: 8px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  gap: 30px;
+  padding-right: 8px;
 }
 
 .card {
-    background: #222;
-    padding: 15px 15px 5px;
-    border: 3px solid rgba(245, 245, 245, 0.22);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  background: #222;
+  padding: 15px 15px 5px;
+  border: 3px solid rgba(245, 245, 245, 0.22);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .card .card-img {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 8px;
-    position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+  position: relative;
 }
 
 .card-img::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    inset: 0 0;
-    background: rgba(20, 20, 20, 0.432);
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0 0;
+  background: rgba(20, 20, 20, 0.432);
 }
 
 .card img {
-    width: 100%;
+  width: 100%;
 }
 
 .play-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: #ccc;
-    position: absolute;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ccc;
+  position: absolute;
+  cursor: pointer;
 }
 
 .play-btn > img {
-    width: 40%;
-    margin-left: 6%;
+  width: 40%;
+  margin-left: 6%;
+}
+
+.project-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5px;
+  position: absolute;
+  color: #bebebe !important;
+  font-size: 15px;
+}
+
+.project-link > img {
+  width: 20px;
+}
+
+.project-repo-link {
+  width: 60%;
+  text-align: center;
+  font-size: 15px;
+  border: 2px solid rgba(245, 245, 245, 0.22);
+  padding: 10px 10px 12px;
+  margin-block: 8px 10px;
+  margin-inline: auto;
+}
+
+.project-repo-link:hover {
+  background: rgba(204, 204, 204, 0.127);
 }
 
 .details-section {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 
 .title {
-    font-size: 0.9rem;
-    margin-bottom: 7px;
-    font-weight: lighter;
+  font-size: 0.9rem;
+  margin-bottom: 7px;
+  font-weight: lighter;
 }
 
 .title span {
-    color: #ff4500;
-    font-size: 1rem;
-    font-weight: bold;
+  color: #ff4500;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .section-title {
-    color: #ff4500;
-    font-size: .9rem;
+  color: #ff4500;
+  font-size: 0.9rem;
 }
 
 .details {
-    font-size: 0.8rem;
-    margin-block: 3px 10px;
-    font-weight: lighter;
+  font-size: 0.8rem;
+  margin-block: 3px 10px;
+  font-weight: lighter;
 }
 
 video {
-    display: none;
+  display: none;
 }
 
 @media (max-width: 800px) {
-    main .container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
+  main .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
 }
 
-@media (max-width: 550px) {
-    main .container {
-        grid-template-columns: 1fr;
-        gap: 40px 0;
-    }
+@media (max-width: 730px) {
+  .play-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .project-link > img {
+    width: 25px;
+  }
+
+  .project-link > span {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  main .container {
+    grid-template-columns: 1fr;
+    gap: 40px 0;
+  }
+
+  .play-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .project-link > img {
+    width: 20px;
+  }
+
+  .project-link > span {
+    display: initial;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 360px) {
+  main .container {
+    gap: 20px 0;
+  }
+
+  .play-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .project-link > img {
+    width: 20px;
+  }
+
+  .project-link > span {
+    display: none;
+    font-size: 13px;
+  }
 }
